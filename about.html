@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Walter Armijos | About</title>
+<meta name="description" content="The story behind Walter Armijos. Builder, seller, operator. Working since he was a kid."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+:root{--black:#0A0A09;--off-black:#111110;--surface:#161614;--border:#2E2E2A;--muted:#9A9A90;--body:#DCDCD4;--white:#FAFAF5;--accent:#D4A853;--accent-dim:rgba(212,168,83,0.12);}
+html{scroll-behavior:smooth;}
+body{background:var(--black);color:var(--body);font-family:"DM Sans",system-ui,sans-serif;font-size:19px;line-height:1.75;overflow-x:hidden;}
+::selection{background:var(--accent);color:var(--black);}
+a{color:inherit;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 48px;display:flex;align-items:center;justify-content:space-between;background:rgba(10,10,9,0.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
+.nav-logo{font-family:"DM Serif Display",Georgia,serif;font-size:19px;color:var(--white);text-decoration:none;}
+.nav-right{display:flex;align-items:center;gap:24px;}
+.nav-back{color:var(--body);text-decoration:none;font-size:15px;font-weight:500;}
+.nav-back:hover{color:var(--white);}
+.nav-cta{background:var(--accent);color:var(--black);padding:9px 18px;border-radius:100px;font-weight:600;font-size:14px;text-decoration:none;}
+.hero{padding:128px 48px 72px;max-width:1120px;margin:0 auto;}
+.hero-eyebrow{font-size:13px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);margin-bottom:22px;display:flex;align-items:center;gap:10px;}
+.hero-eyebrow::before{content:"";width:32px;height:1px;background:var(--accent);}
+.hero-cols{display:grid;grid-template-columns:1.15fr 0.85fr;gap:56px;align-items:center;}
+.hero h1{font-family:"DM Serif Display",Georgia,serif;font-size:clamp(40px,5.2vw,68px);font-weight:400;line-height:1.05;letter-spacing:-0.02em;color:var(--white);margin-bottom:22px;}
+.hero h1 em{font-style:italic;color:var(--accent);}
+.hero-bio{color:var(--body);font-size:21px;line-height:1.75;}
+.portrait{width:100%;border-radius:18px;border:1px solid var(--border);display:block;}
+.kidfig{width:300px;max-width:100%;border-radius:16px;border:1px solid var(--border);display:block;float:right;margin:4px 0 20px 36px;}
+@media(max-width:680px){.kidfig{float:none;margin:0 0 22px 0;width:100%;}}
+.full-divider{width:100%;height:1px;background:var(--border);}
+section{padding:80px 48px;max-width:840px;margin:0 auto;}
+.section-label{font-size:12px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);margin-bottom:18px;display:flex;align-items:center;gap:10px;}
+.section-label::before{content:"";width:24px;height:1px;background:var(--accent);}
+.section-title{font-family:"DM Serif Display",Georgia,serif;font-size:clamp(30px,4vw,44px);font-weight:400;line-height:1.12;letter-spacing:-0.02em;color:var(--white);margin-bottom:28px;}
+.section-title em{font-style:italic;color:var(--accent);}
+.prose p{font-size:19px;line-height:1.85;color:var(--body);margin-bottom:24px;}
+.prose p strong{color:var(--white);font-weight:600;}
+.facts{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;max-width:1120px;margin:0 auto;padding:0 48px;}
+.fact{background:var(--surface);border:1px solid var(--border);padding:30px 26px;}
+.fact .n{font-family:"DM Serif Display",Georgia,serif;font-size:40px;color:var(--white);line-height:1;margin-bottom:8px;}
+.fact .n span{color:var(--accent);}
+.fact .l{color:var(--body);font-size:15px;}
+.cta{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:96px 48px;text-align:center;margin-top:80px;}
+.cta-inner{max-width:640px;margin:0 auto;}
+.cta-title{font-family:"DM Serif Display",Georgia,serif;font-size:clamp(32px,4.5vw,52px);color:var(--white);line-height:1.1;letter-spacing:-0.02em;margin-bottom:18px;}
+.cta-title em{font-style:italic;color:var(--accent);}
+.cta p{color:var(--body);font-size:19px;line-height:1.7;margin-bottom:36px;}
+.btn-primary{background:var(--accent);color:var(--black);padding:15px 30px;border-radius:100px;text-decoration:none;font-weight:600;font-size:16px;display:inline-flex;align-items:center;gap:8px;}
+.btn-primary:hover{opacity:.88;}
+footer{padding:40px 48px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;max-width:1120px;margin:0 auto;}
+.footer-name{font-family:"DM Serif Display",Georgia,serif;color:var(--muted);font-size:16px;}
+.footer-copy{font-size:15px;color:var(--muted);}
+@media(max-width:860px){nav{padding:14px 22px;}.hero{padding:104px 22px 56px;}.hero-cols{grid-template-columns:1fr;gap:34px;}section{padding:56px 22px;}.facts{grid-template-columns:1fr;padding:0 22px;}.cta{padding:64px 22px;}footer{flex-direction:column;gap:16px;text-align:center;padding:32px 22px;}}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">Walter Armijos</a>
+  <div class="nav-right">
+    <a href="index.html" class="nav-back">Home</a>
+    <a href="Walter-Armijos-Resume.pdf" class="nav-cta" download>Resume</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-eyebrow">About</div>
+  <div class="hero-cols">
+    <div>
+      <h1>I learned hard work <em>early.</em></h1>
+      <p class="hero-bio">Builder, seller, operator, born in New York City, first in my family to graduate college. I grew up around people who built things with their hands, and I learned early that nobody hands you anything. You go earn it.</p>
+    </div>
+    <div>
+      <img class="portrait" src="images/walter-solo.jpg" alt="Walter Armijos"/>
+    </div>
+  </div>
+</div>
+
+<div class="full-divider"></div>
+
+<section class="prose">
+  <div class="section-label">Where I come from</div>
+  <h2 class="section-title">Raised around <em>hard work</em></h2>
+  <img class="kidfig" src="images/walter-kid.jpg" alt="Walter as a child" />
+  <p>From a young age I had real exposure to hard work, doing manual labor alongside my dad and my mom. I was not forced into it. Being around it early is what taught me the value of money and the value of family, and what it actually takes to earn a dollar when you do not have the tools or the capital to start the kind of business other people get to start.</p>
+  <p>That is an immigrant mentality. My parents built what they could with their hands, and I helped however I could. I translated and negotiated for them from a young age, even when I did not understand every part of the process. I only knew English from school, which is a very different thing from knowing how to talk to people out in the real world, so I learned that on the fly, in situations that actually mattered.</p>
+  <p>I have been doing hard work since I was young, and I kept doing it all the way through <strong>NYU Stern</strong>, where I earned a BS in Business and became the first in my family to graduate college. That is where my work ethic comes from, and it is why I do not wait around for anyone to hand me anything.</p>
+</section>
+
+<div class="full-divider"></div>
+
+<section class="prose">
+  <div class="section-label">What I do now</div>
+  <h2 class="section-title">Sell, then <em>build the tools to sell faster</em></h2>
+  <p>Today I am a Sales Development Representative at <strong>Lev</strong>, an AI platform for commercial real estate, where I run high volume outbound to brokers, sponsors, and operators and generate pipeline end to end. Before that I was a full cycle <strong>SMB Account Executive and BDR at Topline Pro</strong>, closing my own deals from day one.</p>
+  <p>What sets me apart is that I do not just run the sales process, I build it. I have shipped real software on the Claude API, Vercel, and Supabase, including an SDR performance tracker, a lead engine that prospects on its own, and tools for the family businesses I grew up in. I am a salesperson who can actually build, and a builder who knows how to sell.</p>
+  <p>I build software on the side because I cannot stop thinking about the problems around me, and I help my family where I can. But what I am looking for now is one team to pour that energy into. I am fluent in English and Spanish and based in Brooklyn.</p>
+</section>
+
+<div class="facts">
+  <div class="fact"><div class="n">2<span>+</span></div><div class="l">Years in B2B sales</div></div>
+  <div class="fact"><div class="n">5<span>+</span></div><div class="l">Software products built</div></div>
+  <div class="fact"><div class="n">NYU</div><div class="l">Stern, first generation graduate</div></div>
+  <div class="fact"><div class="n">2<span>x</span></div><div class="l">Fluent in English and Spanish</div></div>
+</div>
+
+<div class="cta">
+  <div class="cta-inner">
+    <div class="section-label" style="justify-content:center;">Let's talk</div>
+    <h2 class="cta-title">Let's build <em>something.</em></h2>
+    <p>If you want a seller who builds, or a builder who can sell, I would love to talk.</p>
+    <a href="index.html#contact" class="btn-primary">Get in touch
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-name">Walter Armijos</div>
+  <div class="footer-copy">NYC. Builder, seller, operator.</div>
+</footer>
+</body>
+</html>
