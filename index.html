@@ -140,8 +140,38 @@
       .contact-section { padding: 80px 24px; }
       footer { flex-direction: column; gap: 20px; padding: 32px 24px; }
     }
-  </style>
+  
+/* mobile, accessibility, overflow pass */
+html,body{max-width:100%;overflow-x:hidden;}
+img,svg,video{max-width:100%;height:auto;}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px;}
+.window{overflow-x:auto;}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto;}*{transition:none!important;animation:none!important;}}
+@media (max-width:600px){
+  body{font-size:17px;}
+  h1,.hero h1{font-size:clamp(30px,9.5vw,40px)!important;line-height:1.12!important;}
+  .section-title,.cta-title,.contact-title{font-size:clamp(23px,7.5vw,30px)!important;}
+  .hero-bio{font-size:17px!important;}
+  .section-intro,.prose p{font-size:16.5px!important;}
+  section{padding-left:18px!important;padding-right:18px!important;padding-top:46px!important;padding-bottom:46px!important;}
+  .hero{padding-left:18px!important;padding-right:18px!important;}
+  .photo-grid{grid-template-columns:1fr!important;}
+  .win-table th,.win-table td{white-space:normal;}
+  .btn-primary,.btn-secondary{padding:13px 22px;font-size:15px;}
+  .venture-pills{flex-wrap:wrap;}
+}
+
+    .hamburger{display:none;background:none;border:1px solid var(--border);border-radius:8px;padding:9px 11px;cursor:pointer;}
+    .hamburger span{display:block;width:20px;height:2px;background:var(--white);margin:4px 0;}
+    .mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;background:rgba(10,10,9,.98);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:10px 24px 18px;z-index:99;}
+    .mobile-menu a{display:block;padding:13px 4px;color:var(--white);text-decoration:none;font-size:17px;border-bottom:1px solid var(--border);}
+    .mobile-menu a:last-child{border-bottom:none;}
+    .mobile-menu.open{display:block;}
+    @media(max-width:768px){.hamburger{display:block;}}
+    </style>
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2064%2064%27%3E%3Crect%20width%3D%2764%27%20height%3D%2764%27%20rx%3D%2713%27%20fill%3D%27%230A0A09%27/%3E%3Ctext%20x%3D%2732%27%20y%3D%2745%27%20font-family%3D%27Georgia%2Cserif%27%20font-size%3D%2738%27%20fill%3D%27%23D4A853%27%20text-anchor%3D%27middle%27%3EW%3C/text%3E%3C/svg%3E" />
+<link rel="canonical" href="https://walterarmijos.com/" />
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Walter Armijos","url":"https://walterarmijos.com","sameAs":["https://www.linkedin.com/in/wsap"],"jobTitle":"B2B Sales Professional","knowsLanguage":["English","Spanish"],"alumniOf":"NYU Stern School of Business","address":{"@type":"PostalAddress","addressLocality":"Brooklyn","addressRegion":"NY","addressCountry":"US"}}</script>
 </head>
 <body>
 
@@ -155,7 +185,16 @@
       <li><a href="Walter-Armijos-Resume.pdf" download>Resume</a></li>
       <li><a href="contact.html" class="nav-cta">Let's Talk</a></li>
     </ul>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
   </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="about.html">About</a>
+    <a href="#ventures">Ventures</a>
+    <a href="experience.html">Experience</a>
+    <a href="skills.html">Skills</a>
+    <a href="Walter-Armijos-Resume.pdf" download>Resume</a>
+    <a href="contact.html">Let's Talk</a>
+  </div>
 
   <div class="hero">
     <div class="hero-grid"></div>
@@ -467,6 +506,10 @@
     setTimeout(() => {
       document.querySelectorAll(".hero .fade-in, .hero h1, .hero-eyebrow, .hero-bio, .hero-actions").forEach(el => el.classList.add("visible"));
     }, 100);
+  
+    const mm=document.getElementById("mobileMenu"),hb=document.getElementById("hamburgerBtn");
+    hb.addEventListener("click",()=>{const o=mm.classList.toggle("open");hb.setAttribute("aria-expanded",o);});
+    mm.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{mm.classList.remove("open");hb.setAttribute("aria-expanded","false");}));
   </script>
 <script defer src="/_vercel/insights/script.js"></script>
 </body>

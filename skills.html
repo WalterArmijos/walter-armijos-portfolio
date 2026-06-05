@@ -56,8 +56,30 @@ section{padding:64px 48px 84px;max-width:1100px;margin:0 auto;}
 footer{padding:40px 48px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;max-width:1100px;margin:0 auto;border-top:1px solid var(--border);}
 .footer-name{font-family:"DM Serif Display",Georgia,serif;color:var(--muted);font-size:16px;}
 .footer-copy{font-size:15px;color:var(--muted);}
-@media(max-width:860px){nav{padding:14px 22px;}.hero{padding:104px 22px 40px;}section{padding:48px 22px 64px;}.skills-grid{grid-template-columns:1fr;}.timeline-item{grid-template-columns:1fr;gap:10px;}.contact-wrap{padding:120px 22px 64px;}footer{flex-direction:column;gap:16px;text-align:center;padding:32px 22px;}}</style>
+@media(max-width:860px){nav{padding:14px 22px;}.hero{padding:104px 22px 40px;}section{padding:48px 22px 64px;}.skills-grid{grid-template-columns:1fr;}.timeline-item{grid-template-columns:1fr;gap:10px;}.contact-wrap{padding:120px 22px 64px;}footer{flex-direction:column;gap:16px;text-align:center;padding:32px 22px;}}
+/* mobile, accessibility, overflow pass */
+html,body{max-width:100%;overflow-x:hidden;}
+img,svg,video{max-width:100%;height:auto;}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px;}
+.window{overflow-x:auto;}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto;}*{transition:none!important;animation:none!important;}}
+@media (max-width:600px){
+  body{font-size:17px;}
+  h1,.hero h1{font-size:clamp(30px,9.5vw,40px)!important;line-height:1.12!important;}
+  .section-title,.cta-title,.contact-title{font-size:clamp(23px,7.5vw,30px)!important;}
+  .hero-bio{font-size:17px!important;}
+  .section-intro,.prose p{font-size:16.5px!important;}
+  section{padding-left:18px!important;padding-right:18px!important;padding-top:46px!important;padding-bottom:46px!important;}
+  .hero{padding-left:18px!important;padding-right:18px!important;}
+  .photo-grid{grid-template-columns:1fr!important;}
+  .win-table th,.win-table td{white-space:normal;}
+  .btn-primary,.btn-secondary{padding:13px 22px;font-size:15px;}
+  .venture-pills{flex-wrap:wrap;}
+}
+</style>
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2064%2064%27%3E%3Crect%20width%3D%2764%27%20height%3D%2764%27%20rx%3D%2713%27%20fill%3D%27%230A0A09%27/%3E%3Ctext%20x%3D%2732%27%20y%3D%2745%27%20font-family%3D%27Georgia%2Cserif%27%20font-size%3D%2738%27%20fill%3D%27%23D4A853%27%20text-anchor%3D%27middle%27%3EW%3C/text%3E%3C/svg%3E" />
+<link rel="canonical" href="https://walterarmijos.com/skills.html" />
+<meta name="description" content="Walter Armijos' skills: sales, RevOps, AI and automation, GTM tools like HubSpot, Salesloft, Clay, and the tech stack behind his builds." />
 </head>
 <body>
 <nav>

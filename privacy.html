@@ -21,7 +21,29 @@ h1{font-family:"DM Serif Display",Georgia,serif;font-size:clamp(36px,5vw,54px);f
 p{margin-bottom:20px;}
 .small{color:var(--muted);font-size:15px;margin-top:36px;}
 footer{padding:36px 24px;text-align:center;color:var(--muted);font-size:15px;border-top:1px solid var(--border);}
+
+/* mobile, accessibility, overflow pass */
+html,body{max-width:100%;overflow-x:hidden;}
+img,svg,video{max-width:100%;height:auto;}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px;}
+.window{overflow-x:auto;}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto;}*{transition:none!important;animation:none!important;}}
+@media (max-width:600px){
+  body{font-size:17px;}
+  h1,.hero h1{font-size:clamp(30px,9.5vw,40px)!important;line-height:1.12!important;}
+  .section-title,.cta-title,.contact-title{font-size:clamp(23px,7.5vw,30px)!important;}
+  .hero-bio{font-size:17px!important;}
+  .section-intro,.prose p{font-size:16.5px!important;}
+  section{padding-left:18px!important;padding-right:18px!important;padding-top:46px!important;padding-bottom:46px!important;}
+  .hero{padding-left:18px!important;padding-right:18px!important;}
+  .photo-grid{grid-template-columns:1fr!important;}
+  .win-table th,.win-table td{white-space:normal;}
+  .btn-primary,.btn-secondary{padding:13px 22px;font-size:15px;}
+  .venture-pills{flex-wrap:wrap;}
+}
 </style>
+<link rel="canonical" href="https://walterarmijos.com/privacy.html" />
+<meta name="description" content="Privacy policy for walterarmijos.com. No cookies, no tracking, anonymous cookieless analytics only." />
 </head>
 <body>
 <nav>
